@@ -1,10 +1,30 @@
 const defaultState = {
-  entries: [],
+  entries: [{
+    entry_id: '01',
+    user: 'Yumisisleydis',
+    date: "2016-09-30",
+    weight: 200,
+    comments: 'Muy gorda'
+  }, {
+    entry_id: '02',
+    user: 'Yumisisleydis',
+    date: "2017-10-15",
+    weight: 300,
+    comments: 'Mucho mas gorda'
+  }, {
+    entry_id: '03',
+    user: 'Yumisisleydis',
+    date: "2017-11-21",
+    weight: 400,
+    comments: 'Eres una Vaca'
+  }],
+
   selectedEntry: {
     entry_id: '',
     user: '',
-    date: 0,
-    weight: 0
+    date: "2018-01-01",
+    weight: 0,
+    comments: ''
   }
 };
 
