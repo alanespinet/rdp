@@ -1,13 +1,13 @@
 const defaultState = {
   entries: [{
     entry_id: '01',
-    user: 'Yumisisleydis',
+    user: 'Andy',
     date: "2016-09-30",
     weight: 200,
     comments: 'Muy gorda'
   }, {
     entry_id: '02',
-    user: 'Yumisisleydis',
+    user: 'Alan',
     date: "2017-10-15",
     weight: 300,
     comments: 'Mucho mas gorda'
@@ -17,6 +17,12 @@ const defaultState = {
     date: "2017-11-21",
     weight: 400,
     comments: 'Eres una Vaca'
+  }, {
+    entry_id: '04',
+    user: 'Yumisisleydis',
+    date: "2017-12-31",
+    weight: 150,
+    comments: 'Flaka rika'
   }],
 
   selectedEntry: {
@@ -46,6 +52,12 @@ const entriesReducer = ( state = defaultState, action ) => {
       return {
         ...state,
         selectedEntry: state.entries.filter( entry => entry.entry_id === action.id )[0]
+      };
+
+    case 'SET_ENTRIES':
+      return {
+        ...state,
+        entries: action.entries
       };
 
     default:

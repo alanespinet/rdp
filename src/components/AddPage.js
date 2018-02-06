@@ -9,7 +9,7 @@ import MonthSelect from './MonthSelect';
 import DaySelect from './DaySelect';
 import YearSelect from './YearSelect';
 
-import { addEntry } from '../redux/actions/actions';
+import { startAddEntry } from '../redux/actions/actions';
 
 
 class AddPage extends React.Component {
@@ -73,7 +73,7 @@ class AddPage extends React.Component {
     else {
       if( this.validateDate() ){
         this.state.entry.date = moment(this.stringDate()).format("YYYY-MM-DD");
-        this.props.dispatch( addEntry(this.state.entry) );
+        this.props.dispatch( startAddEntry(this.state.entry) );
         this.props.history.push('/');
       } else {
         alert('Please check the date. It may be not valid!');

@@ -12,7 +12,7 @@ export default class SingleEntry extends React.Component {
       <div>
         <p>{this.props.user}</p>
         <p>{ moment(this.props.date).format("MMM DD, YYYY") }</p>
-        <p>{this.props.weight}</p>
+        <p>{this.props.weight} lbs</p>
         <p>{this.props.comments}</p>
         <button onClick={this.onHandleDelete}>Del</button>
       </div>

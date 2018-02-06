@@ -3,8 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 
 export default () => (
-  <div>
-    <NavLink to="/" activeClassName="active" exact={true}>Home</NavLink>
-    <NavLink to="/add" activeClassName="active">Add</NavLink>
+  <div className="menuHeader">
+    <div className="per-container">
+      <NavLink to="/" activeClassName="active" exact={true}>Home</NavLink>
+      <NavLink to="/add" activeClassName="active">Add</NavLink>
+    </div>
   </div>
 );

@@ -5,6 +5,7 @@ import MainPage from './MainPage';
 import AddPage from './AddPage';
 import NotFoundPage from './NotFoundPage';
 import MenuHeader from './MenuHeader';
+import Footer from './Footer';
 
 
 export default class App extends React.Component {
@@ -20,6 +21,7 @@ export default class App extends React.Component {
               <Route path="/add" component={AddPage} />
               <Route component={NotFoundPage} />
             </Switch>
+            <Footer />
           </div>
         </BrowserRouter>
       </div>
