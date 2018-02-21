@@ -1,5 +1,5 @@
 node_modules
-src/firebase/firebase.js
+src/firebase/firebase.config.js
 public/bundle.js
 public/bundle.js.map
 public/styles.css
