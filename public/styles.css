@@ -59,6 +59,11 @@ body * { font-family: inherit; }
   color: #fff;
 }
 
+.menuHeaderWrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+
 .footer {
   height: 40px;
   background-color: #ff7f50;
@@ -69,6 +74,145 @@ body * { font-family: inherit; }
 
 .footer p { text-align: center; }
 
+.entriesList {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.entriesList table { width: 100%; border-collapse: collapse; }
+.entriesList th { text-align: left; padding: 20px 0; }
+.entriesList td { padding: 10px 0; }
+.entriesList tbody tr:nth-child(odd){ background-color: #dce2d3; }
+.entriesList tbody tr:nth-child(even){ background-color: #fefefe; }
+
+.entriesList p { margin: 0; }
+.entriesList .nameColumn { width: 25%; padding-left: 20px; }
+.entriesList .dateColumn { width: 20%; }
+.entriesList .weightColumn { width: 15%; }
+.entriesList .commentsColumn { width: 30%; }
+.entriesList .deleteColumn { width: 10%; }
+.entriesList .singleEntryUser { padding-left: 20px; }
+.filterBlock { padding-top: 60px; }
+.filterBlock h3 { font-size: 16px; }
+
+.singleEntry button {
+  border-radius: 0;
+  border: none;
+  background-color: #875d4a;
+  color: #f2f2f2;
+  padding: 5px 20px;
+}
+
+.filterBlockWrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.filterElementsWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filterElementsWrapper label {
+  width: 100%;
+  display: block;
+}
+
+.filterElementsWrapper input[type="text"] {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  height: 30px;
+  padding: 10px;
+  outline: none;
+}
+
+.filterElementsWrapper .filterElement { flex-basis: 20%; }
+
+.filterElementsWrapper .filterElement > label {
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.filterElementsWrapper .dateGroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filterElementsWrapper .dateGroup div { flex-basis: 31%; }
+
+.filterElementsWrapper .dateGroup select {
+  width: 100%;
+  outline: none;
+}
+
+.filterElementsWrapper .buttonsGroup button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 0;
+  height: 30px;
+  border: none;
+  color: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.filterElementsWrapper .buttonsGroup .filterButton { background-color: #568444; }
+.filterElementsWrapper .buttonsGroup .removeFilterButton { background-color: #875d4a; }
+
+.addPageWrapper { width: 900px; margin: 0 auto; }
+.addPageInputs { display: flex; justify-content: space-between; }
+
+.addPageInputs label { width: 100%; display: block; }
+.addPageInputs > div { flex-basis: 22%; }
+
+.addPageInputs .entryDate {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.addPageInputs .entryDate > div { flex-basis: 31%; }
+.addPageInputs .entryDate select { width: 100%; }
+
+.addPageInputs input[type="text"]{
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  height: 30px;
+  padding: 10px;
+  outline: none;
+  margin-top: 10px;
+}
+
+.addPageInputs textarea {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  height: 80px;
+  padding: 10px;
+  outline: none;
+  margin-top: 10px;
+  overflow-y: scroll;
+  border-color: #ccc
+}
+
+.addEntryButton {
+  display: block;
+  width: 300px;
+  margin-bottom: 10px;
+  margin-right: 0;
+  margin-left: auto;
+  margin-top: 30px;
+  border-radius: 0;
+  height: 30px;
+  border: none;
+  color: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  background-color: #568444;
+}
 
 @media ( max-width: 767px ){
   .loading-screen p { font-size: 24px; }

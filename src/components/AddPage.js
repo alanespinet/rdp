@@ -101,15 +101,24 @@ class AddPage extends React.Component {
 
   render(){
     return (
-      <div>
-        <FieldInput field_id="txtUser" labelText="User:" onChangeEvent={this.onUserChange} />
-        <MonthSelect onChangeEvent={this.onMonthChange} />
-        <DaySelect onChangeEvent={this.onDayChange} />
-        <YearSelect onChangeEvent={this.onYearChange} />
-        <FieldInput field_id="txtWeight" labelText="Weight:" onChangeEvent={this.onWeightChange} />
-        <FieldTextArea field_id="txtComments" labelText="Comments:" onChangeEvent={this.onCommentsChange} />
+      <div className="addPage content-panel">
+        <div className="addPageWrapper">
+          <div className="addPageInputs">
+            <FieldInput field_id="txtUser" labelText="User:" onChangeEvent={this.onUserChange} />
+            <div className="entryDateWrapper">
+              <label>Date</label>
+              <div className="entryDate">
+                <MonthSelect onChangeEvent={this.onMonthChange} />
+                <DaySelect onChangeEvent={this.onDayChange} />
+                <YearSelect onChangeEvent={this.onYearChange} />
+              </div>
+            </div>
+            <FieldInput field_id="txtWeight" labelText="Weight:" onChangeEvent={this.onWeightChange} />
+            <FieldTextArea field_id="txtComments" labelText="Comments:" onChangeEvent={this.onCommentsChange} />
+          </div>
 
-        <button onClick={this.onAddEntry}>Add Entry</button>
+          <button className="addEntryButton" onClick={this.onAddEntry}>Add Entry</button>
+        </div>
       </div>
     );
   }

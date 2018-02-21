@@ -89,22 +89,42 @@ class FilterBlock extends React.Component {
 
   render(){
     return (
-      <div>
-        <h3>User:</h3>
-        <form id="filterBlockForm">
-          <input type="text" id="txt-filter-user" name="txtFilterUser" onChange={this.onChangeUser}/>
+      <div className="filterBlock">
+        <div className="filterBlockWrapper">
+          <h3>Filter By:</h3>
+          <form id="filterBlockForm">
+            <div className="filterElementsWrapper">
 
-          <MonthSelect onChangeEvent={this.onChangeFromMonth}/>
-          <DaySelect onChangeEvent={this.onChangeFromDay}/>
-          <YearSelectToFilter onChangeEvent={this.onChangeFromYear}/>
+              <div className="groupControl filterElement">
+                <label htmlFor="txt-filter-user">User:</label>
+                <input type="text" id="txt-filter-user" name="txtFilterUser" onChange={this.onChangeUser}/>
+              </div>
 
-          <MonthSelect onChangeEvent={this.onChangeToMonth}/>
-          <DaySelect onChangeEvent={this.onChangeToDay}/>
-          <YearSelectToFilter onChangeEvent={this.onChangeToYear}/>
+              <div className="dateGroupWrapper filterElement">
+                <label>From:</label>
+                <div className="dateGroup">
+                  <MonthSelect onChangeEvent={this.onChangeFromMonth}/>
+                  <DaySelect onChangeEvent={this.onChangeFromDay}/>
+                  <YearSelectToFilter onChangeEvent={this.onChangeFromYear}/>
+                </div>
+              </div>
 
-          <button onClick={this.doFilter}>Filter</button>
-          <button onClick={this.removeFilter}>Remove Filter</button>
-        </form>
+              <div className="dateGroupWrapper filterElement">
+                <label>To:</label>
+                <div className="dateGroup">
+                  <MonthSelect onChangeEvent={this.onChangeToMonth}/>
+                  <DaySelect onChangeEvent={this.onChangeToDay}/>
+                  <YearSelectToFilter onChangeEvent={this.onChangeToYear}/>
+                </div>
+              </div>
+
+              <div className="buttonsGroup filterElement">
+                <button className="filterButton" onClick={this.doFilter}>Filter</button>
+                <button className="removeFilterButton" onClick={this.removeFilter}>Remove Filter</button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     );
   }

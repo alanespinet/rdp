@@ -37,7 +37,7 @@ store.dispatch( startSetEntries() )
       </Provider>
     );
     ReactDOM.render( jsx, document.getElementById('app') );
-  })
+});
 
 
 
